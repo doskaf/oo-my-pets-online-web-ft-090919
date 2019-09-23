@@ -19,7 +19,7 @@ class Owner
   end
   
   def self.count
-    @@all.size
+    @@all.count
   end
   
 end
