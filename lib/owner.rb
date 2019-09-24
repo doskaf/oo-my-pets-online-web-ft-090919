@@ -62,8 +62,11 @@ class Owner
   end
   
   def list_pets
-    Dog.all.select {|dog| dog.owner == self}
-    Cat.all.select {|cat| cat.owner == self}
+    dogs = []
+    cats = []
+    Dog.all.select {|dog| dogs << dog.owner == self}
+    Cat.all.select {|cat| cats << cat.owner == self}
+    "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
   end
   
 end
