@@ -72,8 +72,8 @@ class Owner
       end
     end
     Cat.all.select do |cat|
-      if cat != nil
-      cats << cat.owner == self
+      if cat != nil && cat.owner == self
+      cats << cat
       end
     end
     "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
