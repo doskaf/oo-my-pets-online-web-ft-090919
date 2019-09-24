@@ -69,10 +69,12 @@ class Owner
     Dog.all.select do |dog|
       if dog != nil
       dogs << dog.owner == self
+      end
     end
     Cat.all.select do |cat|
       if cat != nil
       cats << cat.owner == self
+      end
     end
     "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
   end
