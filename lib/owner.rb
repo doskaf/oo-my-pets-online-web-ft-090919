@@ -1,3 +1,5 @@
+require 'pry'
+
 class Owner
   
   attr_reader :name, :species
@@ -67,6 +69,7 @@ class Owner
     Dog.all.select {|dog| dogs << dog.owner == self}
     Cat.all.select {|cat| cats << cat.owner == self}
     "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
+    binding.pry
   end
   
 end
