@@ -42,4 +42,10 @@ class Owner
     dog = Dog.new(name, owner = self)
   end
   
+  def walk_dogs
+    Dog.all.each do |dog|
+      dog.mood = "Happy"
+    end
+  end
+  
 end
