@@ -77,6 +77,7 @@ class Owner
       end
     end
     "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
+    binding.pry
   end
   
 end
