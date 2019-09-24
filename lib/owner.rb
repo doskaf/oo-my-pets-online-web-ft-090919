@@ -66,10 +66,15 @@ class Owner
   def list_pets
     dogs = []
     cats = []
-    Dog.all.select {|dog| dogs << dog.owner == self}
-    Cat.all.select {|cat| cats << cat.owner == self}
+    Dog.all.select do |dog|
+      if dog != nil
+      dogs << dog.owner == self
+    end
+    Cat.all.select do |cat|
+      if cat != nil
+      cats << cat.owner == self
+    end
     "I have #{dogs.size} dog(s), and #{cats.size} cat(s)."
-    binding.pry
   end
   
 end
