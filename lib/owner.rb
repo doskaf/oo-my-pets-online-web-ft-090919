@@ -66,12 +66,12 @@ class Owner
   def list_pets
     dogs = []
     cats = []
-    Dog.all.select do |dog|
+    Dog.all.each do |dog|
       if dog != nil && dog.owner == self
       dogs << dog
       end
     end
-    Cat.all.select do |cat|
+    Cat.all.each do |cat|
       if cat != nil && cat.owner == self
       cats << cat
       end
