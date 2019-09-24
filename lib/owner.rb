@@ -67,8 +67,8 @@ class Owner
     dogs = []
     cats = []
     Dog.all.select do |dog|
-      if dog != nil
-      dogs << dog.owner == self
+      if dog != nil && dog.owner == self
+      dogs << dog
       end
     end
     Cat.all.select do |cat|
